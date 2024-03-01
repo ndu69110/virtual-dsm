@@ -81,6 +81,35 @@ docker run -it --rm -p 5000:5000 --device=/dev/kvm --cap-add NET_ADMIN --stop-ti
     - /var/dsm:/storage
   ```
 
+FF_Global_BISSRSOPS_Users
+
+BIF_GG_FF_RS_BISSRSOPS_Users BIF_GG_FF_RS_BISSRSBD_Users (for business
+development access)
+
+\*\*\*
+
+FF_Global_BISSRSOPS_Users \> BIF_GG_FF_RS_BISSRSBD_Users nok
+FF_Global_BISSRSFIN_Users \> BIF_GG_FF_RS_BISSRSFIN_Users nok
+FF_Global_BISSRSBD_Users \> BIF_GG_FF_RS_BISSRSOPS_Users nok
+
+==\>
+
+BIF_GG_FF_RS_BISSRSBD_Users \> FF_Global_BISSRSBD_Users
+BIF_GG_FF_RS_BISSRSFIN_Users \> FF_Global_BISSRSFIN_Users
+BIF_GG_FF_RS_BISSRSOPS_Users \> FF_Global_BISSRSOPS_Users
+
+GSC_GG_GSC-RS-L2 GSC_GG_GSC-RS-L3 BIF_GG_DELEGATEDGROUP
+AccessTemplate_L3_Group
+
+\*\*\*
+
+adm.sguimbaltest.ext@geodis.com gdc\\adm.sguimbaltest
+Sherekan1!@Sherekan1!@ GSC_GG_GSC-RS-L3
+
+
+
+
+
   Replace the example path `/var/dsm` with the desired storage folder.
 
 * ### How do I create a growable disk?
